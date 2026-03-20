@@ -2,6 +2,14 @@
 
 `ai-cmd` is an Oh My Zsh plugin that turns natural-language requests into shell commands using OpenRouter's Responses API.
 
+## Demo
+
+The clip below shows the plugin in a real terminal: you type a natural-language line (with the `##` trigger or via the widget), the model returns a shell command, and you can edit or run it from the prompt.
+
+<video src="https://raw.githubusercontent.com/aj-arts/ai-cmd/main/aicmd_demo.mp4" controls playsinline width="100%">
+  <a href="https://raw.githubusercontent.com/aj-arts/ai-cmd/main/aicmd_demo.mp4">Download the demo video</a> if playback is not supported.
+</video>
+
 ## Requirements
 
 - [Oh My Zsh](https://ohmyz.sh/)
