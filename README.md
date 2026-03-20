@@ -38,6 +38,18 @@ Reload your shell:
 source ~/.zshrc
 ```
 
+## Update
+
+Pull the latest changes from the same directory you cloned into, then reload `zsh` so the updated plugin loads:
+
+```sh
+cd "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/ai-cmd"
+git pull
+source ~/.zshrc
+```
+
+If you installed the repo somewhere else, run `git pull` in that directory instead. For shells that were already open, either run `source ~/.zshrc` in each one or start a new terminal so they pick up the updated plugin.
+
 ## Usage
 
 After installation, the default trigger is a prompt line that starts with `##`. Type a request like this and press Enter:
@@ -89,7 +101,7 @@ With that binding in place, type a natural-language request at the prompt and pr
 Optional environment variables:
 
 ```sh
-export AICMD_MODEL="z-ai/glm-5-turbo"
+export AICMD_MODEL="google/gemini-3-flash-preview"
 export AICMD_TARGET_SHELL="auto"
 export AICMD_TIMEOUT="30"
 export AICMD_ACCEPT_LINE_TRIGGER="1"

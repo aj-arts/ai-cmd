@@ -1,7 +1,7 @@
 # Single-file Oh My Zsh plugin for turning natural language into shell commands
 # via OpenRouter's Responses API.
 
-: "${AICMD_MODEL:=z-ai/glm-5-turbo}"
+: "${AICMD_MODEL:=google/gemini-3-flash-preview}"
 : "${AICMD_API_URL:=https://openrouter.ai/api/v1/responses}"
 : "${AICMD_TARGET_SHELL:=auto}"
 : "${AICMD_TIMEOUT:=30}"
@@ -512,7 +512,7 @@ Behavior:
 
 Environment:
   OPENROUTER_API_KEY     Required API key for OpenRouter.
-  AICMD_MODEL            Default: z-ai/glm-5-turbo
+  AICMD_MODEL            Default: google/gemini-3-flash-preview
   AICMD_API_URL          Default: https://openrouter.ai/api/v1/responses
   AICMD_TARGET_SHELL     Default: auto (allowed: auto, zsh, bash)
   AICMD_TIMEOUT          Default: 30
