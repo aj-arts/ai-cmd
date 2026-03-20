@@ -1,0 +1,12 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor / backup files
+*~
+*.swp
+*.swo
+
+# Local env (never commit API keys)
+.env
+.env.local
