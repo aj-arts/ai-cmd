@@ -17,13 +17,6 @@ Clone the repository into your Oh My Zsh custom plugins directory:
 git clone https://github.com/aj-arts/ai-cmd.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/ai-cmd"
 ```
 
-If you already have a local checkout, copy the plugin file into the same location instead:
-
-```sh
-mkdir -p "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/ai-cmd"
-cp ai-cmd.plugin.zsh "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/ai-cmd/"
-```
-
 Add `ai-cmd` to the `plugins=(...)` list in your `~/.zshrc`:
 
 ```sh
