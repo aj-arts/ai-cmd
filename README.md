@@ -11,10 +11,13 @@
 
 ## Install In Oh My Zsh
 
-Clone the repository into your Oh My Zsh custom plugins directory:
+Download `ai-cmd.plugin.zsh` into your Oh My Zsh custom plugins directory (the directory is created if it does not exist):
 
 ```sh
-git clone https://github.com/aj-arts/ai-cmd.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/ai-cmd"
+AICMD_DIR="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/ai-cmd"
+mkdir -p "$AICMD_DIR"
+curl -fsSL -o "$AICMD_DIR/ai-cmd.plugin.zsh" \
+  "https://raw.githubusercontent.com/aj-arts/ai-cmd/main/ai-cmd.plugin.zsh"
 ```
 
 Add `ai-cmd` to the `plugins=(...)` list in your `~/.zshrc`:
@@ -40,15 +43,17 @@ source ~/.zshrc
 
 ## Update
 
-Pull the latest changes from the same directory you cloned into, then reload `zsh` so the updated plugin loads:
+Run the same download commands again (this overwrites `ai-cmd.plugin.zsh` if it already exists), then reload `zsh` so the updated plugin loads:
 
 ```sh
-cd "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/ai-cmd"
-git pull
+AICMD_DIR="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/ai-cmd"
+mkdir -p "$AICMD_DIR"
+curl -fsSL -o "$AICMD_DIR/ai-cmd.plugin.zsh" \
+  "https://raw.githubusercontent.com/aj-arts/ai-cmd/main/ai-cmd.plugin.zsh"
 source ~/.zshrc
 ```
 
-If you installed the repo somewhere else, run `git pull` in that directory instead. For shells that were already open, either run `source ~/.zshrc` in each one or start a new terminal so they pick up the updated plugin.
+For shells that were already open, either run `source ~/.zshrc` in each one or start a new terminal so they pick up the updated plugin.
 
 ## Usage
 
