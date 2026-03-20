@@ -29,10 +29,18 @@ plugins=(
 )
 ```
 
-Set your OpenRouter API key in `~/.zshrc`:
+Add your OpenRouter API key to `~/.zshrc` so it persists across new shells. Running `export` only in the current terminal does not save anything to the file.
+
+Open `~/.zshrc` in an editor and add:
 
 ```sh
 export OPENROUTER_API_KEY="your_api_key_here"
+```
+
+Or append that line from a terminal (replace the placeholder with your real key; do not run this twice or you will duplicate the line):
+
+```sh
+echo 'export OPENROUTER_API_KEY="your_api_key_here"' >> ~/.zshrc
 ```
 
 Reload your shell:
