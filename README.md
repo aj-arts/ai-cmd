@@ -6,9 +6,13 @@
 
 The clip below shows the plugin in a real terminal: you type a natural-language line (with the `##` trigger or via the widget), the model returns a shell command, and you can edit or run it from the prompt.
 
-<video src="https://raw.githubusercontent.com/aj-arts/ai-cmd/main/aicmd_demo.mp4" controls playsinline width="100%">
-  <a href="https://raw.githubusercontent.com/aj-arts/ai-cmd/main/aicmd_demo.mp4">Download the demo video</a> if playback is not supported.
+<video src="https://github.com/user-attachments/assets/647b8953-4aff-4109-9cdd-e3b6264deb37" controls playsinline width="100%">
+  <a href="https://github.com/user-attachments/assets/647b8953-4aff-4109-9cdd-e3b6264deb37">Download the demo video</a> if playback is not supported.
 </video>
+
+
+
+
 
 ## Requirements
 
