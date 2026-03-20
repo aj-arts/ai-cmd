@@ -47,7 +47,15 @@ source ~/.zshrc
 
 ## Usage
 
-Generate a command from a prompt:
+After installation, the default trigger is a prompt line that starts with `##`. Type a request like this and press Enter:
+
+```sh
+## find the ten largest files here
+```
+
+`ai-cmd` will replace that line with the generated shell command so you can review or edit it before running it.
+
+You can also generate a command explicitly from a prompt:
 
 ```sh
 aicmd "find the ten largest files here"
@@ -57,29 +65,18 @@ In interactive `zsh`, the generated command is inserted into your prompt so you 
 
 ## Trigger Options
 
-### Option 1: Comment-Style Trigger On Enter
+### Option 1: Change The Comment-Style Prefix
 
-If you prefer not to remember a keybinding, enable the accept-line trigger in `~/.zshrc`:
-
-```sh
-export AICMD_ACCEPT_LINE_TRIGGER=1
-export AICMD_TRIGGER_PREFIX="#"
-```
-
-Then reload your shell with `source ~/.zshrc`.
-
-After that, you can type a prompt that starts with `#` and press Enter:
-
-```sh
-# find the ten largest files here
-```
-
-`ai-cmd` will replace that line with the generated shell command instead of treating it as a normal shell comment.
-
-If you want to keep `#` available for real comments, use a different prefix such as `##`:
+The default prefix is `##` so plain `#` comments still behave normally. If you want a different prefix, you can change it:
 
 ```sh
 export AICMD_TRIGGER_PREFIX="##"
+```
+
+If you want to disable the Enter-triggered comment flow entirely:
+
+```sh
+export AICMD_ACCEPT_LINE_TRIGGER=0
 ```
 
 ### Option 2: Explicit Keybinding
@@ -102,8 +99,8 @@ Optional environment variables:
 export AICMD_MODEL="z-ai/glm-5-turbo"
 export AICMD_TARGET_SHELL="auto"
 export AICMD_TIMEOUT="30"
-export AICMD_ACCEPT_LINE_TRIGGER="0"
-export AICMD_TRIGGER_PREFIX="#"
+export AICMD_ACCEPT_LINE_TRIGGER="1"
+export AICMD_TRIGGER_PREFIX="##"
 ```
 
 ## Built-In Commands

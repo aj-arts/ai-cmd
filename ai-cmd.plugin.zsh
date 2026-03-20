@@ -8,8 +8,8 @@
 : "${AICMD_TITLE:=ai-cmd-oh-my-zsh}"
 : "${AICMD_INCLUDE_BUFFER:=1}"
 : "${AICMD_INCLUDE_ENV_CONTEXT:=1}"
-: "${AICMD_ACCEPT_LINE_TRIGGER:=0}"
-: "${AICMD_TRIGGER_PREFIX:=#}"
+: "${AICMD_ACCEPT_LINE_TRIGGER:=1}"
+: "${AICMD_TRIGGER_PREFIX:=##}"
 
 typeset -g __AICMD_COMMAND=""
 typeset -g __AICMD_EXPLANATION=""
@@ -218,7 +218,7 @@ __aicmd_extract_trigger_prompt() {
   setopt localoptions extendedglob
 
   local buffer_text="${1-}"
-  local prefix="${AICMD_TRIGGER_PREFIX:-#}"
+  local prefix="${AICMD_TRIGGER_PREFIX:-##}"
   local prefix_len prompt_text
 
   [[ -n "$prefix" ]] || return 1
@@ -520,15 +520,15 @@ Environment:
   AICMD_TITLE            Optional title header (default: ai-cmd-oh-my-zsh)
   AICMD_INCLUDE_BUFFER   Default: 1
   AICMD_INCLUDE_ENV_CONTEXT Default: 1
-  AICMD_ACCEPT_LINE_TRIGGER Default: 0
-  AICMD_TRIGGER_PREFIX   Default: #
+  AICMD_ACCEPT_LINE_TRIGGER Default: 1
+  AICMD_TRIGGER_PREFIX   Default: ##
 
 Examples:
   aicmd "find the ten largest files here"
   aicmd --bash "list git branches merged into main"
   bindkey '^X^A' aicmd-widget
   export AICMD_ACCEPT_LINE_TRIGGER=1
-  # Then type: # find the ten largest files here
+  # Then type: ## find the ten largest files here
 EOF
 }
 
